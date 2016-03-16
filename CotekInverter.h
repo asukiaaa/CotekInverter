@@ -1,15 +1,15 @@
-#ifndef CotekSkInverter_h
-#define CotekSkInverter_h
+#ifndef CotekInverter_h
+#define CotekInverter_h
 #include "Arduino.h"
 #include <SoftwareSerial.h>
 
-class CotekSkInverter {
+class CotekInverter {
   private:
   SoftwareSerial* my_serial;
   int my_serial_speed;
 
   public:
-  CotekSkInverter(uint8_t tx_pin, uint8_t rx_pin);
+  CotekInverter(uint8_t tx_pin, uint8_t rx_pin);
   void power_on();
   void power_off();
 };
