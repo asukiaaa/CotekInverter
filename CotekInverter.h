@@ -9,7 +9,7 @@ class CotekInverter {
   int my_serial_speed;
 
   public:
-  CotekInverter(uint8_t tx_pin, uint8_t rx_pin);
+  CotekInverter(uint8_t rx_pin, uint8_t tx_pin);
   void power_on();
   void power_off();
 };

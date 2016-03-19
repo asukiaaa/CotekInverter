@@ -9,14 +9,14 @@ Role of modular pins from Cotek Inverter is like this.
 | ------ | ------------ |
 | 1      | Not used     |
 | 2      | GND          |
-| 3      | TXD          |
-| 4      | RXD          |
+| 3      | RXD          |
+| 4      | TXD          |
 | 5      | Remo Control |
 | 6      | VCC          |
 
 You can connect the pins to arduino like this.
-- TXD -> RS232 level converter -> Arduino software serial RX pin.
-- RXD -> RS232 level converter -> Arduino software serial TX pin.
+- RXD -> RS232 level converter -> Arduino D8(SoftwareSerial TX)
+- TXD -> RS232 level converter -> Arduino D9(SoftwareSerial RX)
 - GND -> Arduino GND
 
 # Useage
@@ -29,9 +29,9 @@ This library uses SoftwareSerial, so please include also that.
 
 ## Definition
 ```c
-CotekInverter inverter(8, 9); // TX, RX
+CotekInverter inverter(8, 9); // RX, TX
 ```
-Please define with tx and rx pins.
+Please define with rx and tx pins.
 
 ## Power off
 ```c
@@ -52,7 +52,7 @@ You can turn on the inverter.
 
 int SWITCH_PIN = 14;
 
-CotekInverter inverter(8, 9); // TX, RX
+CotekInverter inverter(8, 9); // RX, TX
 
 void setup() {
   pinMode(SWITCH_PIN, INPUT);

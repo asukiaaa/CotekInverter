@@ -6,8 +6,8 @@
  */
 #include "CotekInverter.h"
 
-CotekInverter::CotekInverter(uint8_t tx_pin, uint8_t rx_pin) {
-  my_serial = new SoftwareSerial(tx_pin, rx_pin);
+CotekInverter::CotekInverter(uint8_t rx_pin, uint8_t tx_pin) {
+  my_serial = new SoftwareSerial(rx_pin, tx_pin);
   my_serial_speed = 4800;
 };
 
