@@ -62,7 +62,7 @@ void setup() {
 void loop() {
   if ( digitalRead(SWITCH_PIN) == HIGH ) {
     inverter.power_on();
-  } else if ( charge_controller.battery < 24.7 ) {
+  } else {
     inverter.power_off();
   }
 
