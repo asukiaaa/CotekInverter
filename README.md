@@ -42,7 +42,7 @@ You can trun off the inverter.
 
 ## Power on
 ```c
-inverter.power_off();
+inverter.power_on();
 ```
 You can turn on the inverter.
 
