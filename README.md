@@ -17,6 +17,7 @@ Role of modular pins from Cotek Inverter is like this.
 You can connect the pins to arduino like this.
 - RXD -> RS232 level converter -> Arduino D8(SoftwareSerial TX)
 - TXD -> RS232 level converter -> Arduino D9(SoftwareSerial RX)
+- Remo Control -> Arduino GND
 - GND -> Arduino GND
 
 # Useage
