@@ -1,5 +1,5 @@
 # CotekInverter
-A library to controll cotek inverter with using arduino.
+A library to controll cotek inverter with using arduino in RS232 serial communication.
 
 # Connection between Cotek Inverter and Arduino
 
