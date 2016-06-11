@@ -1,5 +1,5 @@
 # CotekInverter
-A library to controll cotek inverter with using arduino.
+A library to controll cotek inverter with using arduino in RS232 serial communication.
 
 # Connection between Cotek Inverter and Arduino
 
@@ -17,6 +17,7 @@ Role of modular pins from Cotek Inverter is like this.
 You can connect the pins to arduino like this.
 - RXD -> RS232 level converter -> Arduino D8(SoftwareSerial TX)
 - TXD -> RS232 level converter -> Arduino D9(SoftwareSerial RX)
+- Remo Control -> Arduino GND
 - GND -> Arduino GND
 
 # Useage
@@ -41,7 +42,7 @@ You can trun off the inverter.
 
 ## Power on
 ```c
-inverter.power_off();
+inverter.power_on();
 ```
 You can turn on the inverter.
 
