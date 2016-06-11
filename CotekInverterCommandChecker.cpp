@@ -9,14 +9,21 @@
 // CotekInverter inverter(8, 9); // RX, TX
 // CotekInverterCommandChecker command_checker(&inverter);
 // String command_to_start_from = "'sRJ";
+// String found_commands;
 //
 // void setup() {
 //   command_checker.set_command(command_to_start_from);
+//   Serial.begin(9600);
 // }
 // void loop() {
 //   command_checker.check_command();
 //   command_checker.update_to_next_command();
-//    delay(10);
+//   found_commands = command_checker.get_found_commands();
+//   if ( found_commands.length() > 0 ) {
+//     Serial.println("found commands:");
+//     Serial.println(found_commands);
+//   }
+//   delay(10);
 // }
 //
 //
