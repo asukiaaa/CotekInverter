@@ -1,8 +1,8 @@
 #include "CotekInverter.h"
 
-CotekInverter::CotekInverter(uint8_t rx_pin, uint8_t tx_pin) {
-  my_serial = new SoftwareSerial(rx_pin, tx_pin);
-  my_serial_speed = 4800;
+CotekInverter::CotekInverter(uint8_t rx, uint8_t tx) {
+  mySerial = new SoftwareSerial(rx, tx);
+  mySerialSpeed = 4800;
 };
 
 // Found the following commands for SK-1500
@@ -20,14 +20,14 @@ CotekInverter::CotekInverter(uint8_t rx_pin, uint8_t tx_pin) {
 // Power 8 // unknown
 // Power 9 // unknown
 
-void CotekInverter::power_on() {
-  my_serial->begin(my_serial_speed);
-  my_serial->println("Power 1");
-  my_serial->end();
+void CotekInverter::powerOn() {
+  mySerial->begin(mySerialSpeed);
+  mySerial->println("Power 1");
+  mySerial->end();
 };
 
-void CotekInverter::power_off() {
-  my_serial->begin(my_serial_speed);
-  my_serial->println("Power 0");
-  my_serial->end();
+void CotekInverter::powerOff() {
+  mySerial->begin(mySerialSpeed);
+  mySerial->println("Power 0");
+  mySerial->end();
 };
