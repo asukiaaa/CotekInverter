@@ -1,7 +1,11 @@
 #include "CotekInverter.h"
 
+CotekInverter::CotekInverter(HardwareSerial* hardSerial) {
+  mySerial = new SomeSerial(hardSerial);
+};
+
 CotekInverter::CotekInverter(uint8_t rx, uint8_t tx) {
-  mySerial = new SoftwareSerial(rx, tx);
+  mySerial = new SomeSerial(rx, tx);
 };
 
 void CotekInverter::begin(int speed) {
