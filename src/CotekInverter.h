@@ -6,12 +6,12 @@
 class CotekInverter {
   public:
   CotekInverter(uint8_t rx, uint8_t tx);
+  void begin(int speed);
   void powerOn();
   void powerOff();
 
   private:
   SoftwareSerial* mySerial;
-  mySerialSpeed;
 };
 
 #endif
